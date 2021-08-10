@@ -3,16 +3,16 @@
 namespace carlosmarques00\mercaloopNotification\Services;
 
 use GuzzleHttp\Client;
-use Tymon\JWTAuth\JWTAuth;
+
 class Notification
 {
     protected $client;
     protected $token;
 
-    public function __construct(string $urlBase, JWTAuth $jWTAuth)
+    public function __construct(string $urlBase, string $token)
     {
         $this->client = new Client(['base_uri' => $urlBase]);
-        $this->token = $jWTAuth->getToken()->get(); 
+        $this->token = $token; 
     }
 
     public function newNotification(
