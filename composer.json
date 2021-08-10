@@ -1,0 +1,17 @@
+{
+    "name": "carlosmarques00/mercaloop-notification",
+    "authors": [
+        {
+            "name": "Carlos Marques",
+            "email": "carlos.marques00@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.3"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "carlosmarques00\\mercaloopNotification\\" :  "src/"
+        }
+      }
+}
