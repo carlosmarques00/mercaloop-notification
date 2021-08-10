@@ -9,10 +9,10 @@ class Notification
     protected $client;
     protected $token;
 
-    public function __construct(string $urlBase)
+    public function __construct(string $urlBase, JWTAuth $jWTAuth)
     {
         $this->client = new Client(['base_uri' => $urlBase]);
-        $this->token = JWTAuth::getToken()->get(); 
+        $this->token = $jWTAuth->getToken()->get(); 
     }
 
     public function newNotification(
