@@ -1,10 +1,10 @@
 <?php
 
-namespace Services;
+namespace carlosmarques00\mercaloopNotification\Services;
 
 use GuzzleHttp\Client;
 
-class NotificationService
+class Notification
 {
     protected $client;
     protected $token;
